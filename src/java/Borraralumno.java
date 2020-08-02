@@ -36,44 +36,10 @@ public class Borraralumno extends HttpServlet {
             int id;
             id = Integer.parseInt(request.getParameter("id"));
             System.out.println(id);
-            Alumno a = Acciones_alumno.getAlumnoById(id);
-
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Ficha de Cambios de Alumno</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Ficha del Alumno</h1>");
-            out.println("<form method='post' action='editar2' name='editar' >");
-            out.println("<table border='1' >");
-            out.println("<tr>"
-                    + "<td></td>"
-                    + "<td> <input type='hidden' name='id2' value='"+a.getId()+"' > </td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Nombre: </td>"
-                    + "<td> <input type='text' name='nombre2' value='"+a.getNombre()+"' > </td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Password</td>"
-                    + "<td> <input type='password' name='password2' value='"+a.getPassword()+"' > </td>"
-                    + "</tr>"
-                    + "<tr>"
-                    + "<td>Email</td>"
-                    + "<td> <input type='email' name='email2' value='"+a.getEmail()+"' > </td>"
-                    + "</tr>"
-                    + "<tr><td>Pais:</td> <td><select name='pais2'>"
-                            + "<option>India</option>"
-                            + "<option>Mexico</option>"
-                            + "<option>Al que nadie quiere</option>"
-                            + "<option>Por ahi</option>"
-                            + "</select></td> </tr>"
-                    + "<tr><td colspan='2'><input type='submit' value='Editar Datos' ></td></tr>");
-            out.println("</table>");
-            out.println("</form>");
-            out.println("</body>");
-            out.println("</html>");
+            Acciones_alumno.Eliminar_alumno(id);
+            
+            response.sendRedirect("index.html");
+            
         }
     }
 
