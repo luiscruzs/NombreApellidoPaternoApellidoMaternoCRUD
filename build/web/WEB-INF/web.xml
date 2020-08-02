@@ -8,6 +8,10 @@
         <servlet-name>ConsultarAlumnos</servlet-name>
         <servlet-class>ConsultarAlumnos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Borraralumno</servlet-name>
+        <servlet-class>Borraralumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Guardaralumno</servlet-name>
         <url-pattern>/Guardaralumno</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ConsultarAlumnos</servlet-name>
         <url-pattern>/ConsultarAlumnos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Borraralumno</servlet-name>
+        <url-pattern>/Borraralumno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
